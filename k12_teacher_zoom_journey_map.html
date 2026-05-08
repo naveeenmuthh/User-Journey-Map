@@ -1,0 +1,290 @@
+
+<style>
+  :root { --col1:#E6F1FB; --col1t:#042C53; --col2:#E1F5EE; --col2t:#04342C; --col3:#FAEEDA; --col3t:#412402; --col4:#FBEAF0; --col4t:#4B1528; --col5:#EEEDFE; --col5t:#26215C; }
+  * { box-sizing: border-box; margin: 0; }
+  body { font-family: var(--font-sans, sans-serif); }
+  .wrap { padding: 0 0 2rem; }
+  h2 { font-size: 13px; font-weight: 500; color: var(--color-text-secondary); margin: 0 0 4px; letter-spacing: .04em; text-transform: uppercase; }
+  .persona-bar { display: flex; align-items: center; gap: 10px; margin-bottom: 18px; padding: 10px 14px; border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); background: var(--color-background-secondary); }
+  .persona-avatar { width: 34px; height: 34px; border-radius: 50%; background: var(--color-background-info); display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 500; color: var(--color-text-info); flex-shrink: 0; }
+  .persona-name { font-size: 13px; font-weight: 500; color: var(--color-text-primary); }
+  .persona-sub { font-size: 12px; color: var(--color-text-secondary); }
+  .jmap { width: 100%; border-collapse: collapse; font-size: 12px; table-layout: fixed; }
+  .jmap th, .jmap td { border: 0.5px solid var(--color-border-tertiary); padding: 10px 10px; vertical-align: top; line-height: 1.55; }
+  .row-label { width: 88px; font-size: 11px; font-weight: 500; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: .04em; background: var(--color-background-secondary); vertical-align: middle; text-align: center; }
+  .stage-s1 { background: var(--col1); color: var(--col1t); }
+  .stage-s2 { background: var(--col2); color: var(--col2t); }
+  .stage-s3 { background: var(--col3); color: var(--col3t); }
+  .stage-s4 { background: var(--col4); color: var(--col4t); }
+  .stage-s5 { background: var(--col5); color: var(--col5t); }
+  .stage-hdr { font-size: 12px; font-weight: 500; text-align: center; padding: 8px 6px; border-bottom: 2px solid currentColor; }
+  .cell-s1 { color: var(--color-text-primary); background: color-mix(in srgb, var(--col1) 25%, var(--color-background-primary)); }
+  .cell-s2 { color: var(--color-text-primary); background: color-mix(in srgb, var(--col2) 25%, var(--color-background-primary)); }
+  .cell-s3 { color: var(--color-text-primary); background: color-mix(in srgb, var(--col3) 25%, var(--color-background-primary)); }
+  .cell-s4 { color: var(--color-text-primary); background: color-mix(in srgb, var(--col4) 25%, var(--color-background-primary)); }
+  .cell-s5 { color: var(--color-text-primary); background: color-mix(in srgb, var(--col5) 25%, var(--color-background-primary)); }
+  .tag { display: inline-block; font-size: 10px; padding: 2px 6px; border-radius: 4px; font-weight: 500; margin: 2px 2px 0 0; line-height: 1.4; }
+  .tag-pain { background: #FCEBEB; color: #A32D2D; border: 0.5px solid #F09595; }
+  .tag-opp  { background: #EAF3DE; color: #3B6D11; border: 0.5px solid #97C459; }
+  .tag-emo  { background: #FAEEDA; color: #854F0B; border: 0.5px solid #EF9F27; }
+  .tag-break { background: #FCEBEB; color: #A32D2D; font-size: 10px; padding: 2px 7px; border-radius: 4px; border: 0.5px solid #E24B4A; }
+  .breakdown { margin: 18px 0 0; }
+  .breakdown-title { font-size: 12px; font-weight: 500; color: var(--color-text-secondary); margin-bottom: 8px; text-transform: uppercase; letter-spacing: .04em; }
+  .breakdown-list { display: flex; flex-wrap: wrap; gap: 6px; }
+  .curve-wrap { margin-top: 22px; }
+  .curve-title { font-size: 12px; font-weight: 500; color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: .04em; margin-bottom: 8px; }
+  ul { padding-left: 14px; margin: 4px 0 0; }
+  li { margin-bottom: 3px; }
+  .act { font-style: italic; color: var(--color-text-secondary); font-size: 11px; margin-top: 4px; }
+</style>
+<h2 class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">K-12 Teacher journey map across five stages of a Zoom class session, showing actions, thoughts, emotions, pain points, and opportunities grounded in research data.</h2>
+<div class="wrap">
+  <div class="persona-bar">
+    <div class="persona-avatar">KT</div>
+    <div>
+      <div class="persona-name">K-12 Teacher — Primary persona</div>
+      <div class="persona-sub">Ages 25–55 · 5 sessions/week · 180+ days/year · 60% use AI, 85% feel unprepared (Gallup 2025)</div>
+    </div>
+  </div>
+  <table class="jmap">
+    <colgroup>
+      <col style="width:88px">
+      <col><col><col><col><col>
+    </colgroup>
+    <thead>
+      <tr>
+        <th class="row-label" style="border:0.5px solid var(--color-border-tertiary);"></th>
+        <th class="stage-hdr stage-s1">1 · Pre-class</th>
+        <th class="stage-hdr stage-s2">2 · Joining</th>
+        <th class="stage-hdr stage-s3">3 · During class</th>
+        <th class="stage-hdr stage-s4">4 · Interaction</th>
+        <th class="stage-hdr stage-s5">5 · Post-class</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="row-label">Actions</td>
+        <td class="cell-s1">
+          <ul>
+            <li>Prepares lesson plan in a separate doc</li>
+            <li>Uploads materials to LMS (Canvas / Google Classroom)</li>
+            <li>Sets up Zoom meeting separately</li>
+            <li>Shares meeting link via email or LMS announcement</li>
+            <li>Manually configures breakout rooms</li>
+          </ul>
+          <div class="act">Uses 3+ disconnected tools before class begins</div>
+        </td>
+        <td class="cell-s2">
+          <ul>
+            <li>Opens Zoom; admits students from waiting room</li>
+            <li>Verbally calls attendance in chat or aloud</li>
+            <li>Re-shares materials students can't find in LMS</li>
+            <li>Troubleshoots student mic/camera issues</li>
+          </ul>
+          <div class="act">First 10 min lost to admin before teaching begins</div>
+        </td>
+        <td class="cell-s3">
+          <ul>
+            <li>Delivers lesson via screen share or whiteboard</li>
+            <li>Monitors chat for questions while speaking</li>
+            <li>Manages breakout rooms manually</li>
+            <li>Switches between Zoom + LMS + whiteboard tabs</li>
+            <li>Tries to gauge who is engaged vs disengaged</li>
+          </ul>
+          <div class="act">Juggles 3 active tools simultaneously</div>
+        </td>
+        <td class="cell-s4">
+          <ul>
+            <li>Calls on students verbally; monitors reactions</li>
+            <li>Answers questions in chat while continuing lesson</li>
+            <li>Uses polls or breakout rooms for group work</li>
+            <li>Attempts to re-engage visibly passive students</li>
+          </ul>
+          <div class="act">No data on who's disengaged until it's too late</div>
+        </td>
+        <td class="cell-s5">
+          <ul>
+            <li>Manually compiles attendance from memory / chat log</li>
+            <li>Downloads Zoom recording; re-uploads to LMS</li>
+            <li>Sends recap email separately</li>
+            <li>Messages parents about absences individually</li>
+            <li>Plans next session across multiple tools again</li>
+          </ul>
+          <div class="act">30–45 min of post-class admin per session</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="row-label">Thoughts</td>
+        <td class="cell-s1">
+          <ul>
+            <li><em>"Why can't my lesson plan live inside Zoom?"</em></li>
+            <li><em>"I have to send the link again — students lose it every time."</em></li>
+            <li><em>"Should I use the AI summary feature? I'm not sure how."</em></li>
+          </ul>
+        </td>
+        <td class="cell-s2">
+          <ul>
+            <li><em>"Who's absent and who's just camera-off?"</em></li>
+            <li><em>"Why is there no auto-attendance?"</em></li>
+            <li><em>"It's been 8 minutes and we haven't started yet."</em></li>
+          </ul>
+        </td>
+        <td class="cell-s3">
+          <ul>
+            <li><em>"I can't tell if students are actually learning."</em></li>
+            <li><em>"Only 32% of my peers say their tools measure participation."</em></li>
+            <li><em>"The whiteboard is in one app, the LMS in another — it breaks my flow."</em></li>
+          </ul>
+        </td>
+        <td class="cell-s4">
+          <ul>
+            <li><em>"Half the class hasn't said a word — are they there?"</em></li>
+            <li><em>"I wish I could see an engagement signal per student."</em></li>
+            <li><em>"Students are probably using ChatGPT right now — I can't tell."</em></li>
+          </ul>
+        </td>
+        <td class="cell-s5">
+          <ul>
+            <li><em>"This recording won't auto-go into Canvas — manual upload again."</em></li>
+            <li><em>"I need to tell 3 parents about absences. Separately. By hand."</em></li>
+            <li><em>"AI wrote a session summary — but where do I send it?"</em></li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td class="row-label">Emotions</td>
+        <td class="cell-s1">
+          <span class="tag tag-emo">😐 Resigned</span>
+          <span class="tag tag-emo">😟 Anxious about AI</span>
+          <span class="tag tag-emo">🕐 Pressured for time</span>
+          <p style="font-size:11px;margin-top:6px;color:var(--color-text-secondary)">Moderate energy, deflated by repetitive setup ritual</p>
+        </td>
+        <td class="cell-s2">
+          <span class="tag tag-emo">😤 Frustrated</span>
+          <span class="tag tag-emo">😰 Stressed</span>
+          <p style="font-size:11px;margin-top:6px;color:var(--color-text-secondary)">Frantic energy; technical issues erode confidence before teaching even starts</p>
+        </td>
+        <td class="cell-s3">
+          <span class="tag tag-emo">😓 Overwhelmed</span>
+          <span class="tag tag-emo">😶 Uncertain</span>
+          <p style="font-size:11px;margin-top:6px;color:var(--color-text-secondary)">Cognitive load peaks — teaching + monitoring + tool-switching simultaneously</p>
+        </td>
+        <td class="cell-s4">
+          <span class="tag tag-emo">😔 Uncertain</span>
+          <span class="tag tag-emo">😞 Helpless</span>
+          <p style="font-size:11px;margin-top:6px;color:var(--color-text-secondary)">Feels blind to real engagement; worries about AI misuse with no tools to detect it</p>
+        </td>
+        <td class="cell-s5">
+          <span class="tag tag-emo">😩 Exhausted</span>
+          <span class="tag tag-emo">😤 Resentful</span>
+          <p style="font-size:11px;margin-top:6px;color:var(--color-text-secondary)">Admin overhead undoes the teaching win; feels like the tools don't care about educators</p>
+        </td>
+      </tr>
+      <tr>
+        <td class="row-label">Pain points</td>
+        <td class="cell-s1">
+          <span class="tag tag-pain">🔴 Tool fragmentation (EDUCAUSE 2022–24)</span><br>
+          <span class="tag tag-pain">🔴 No native lesson plan view in Zoom</span><br>
+          <span class="tag tag-pain">🔴 AI anxiety — 85% feel unprepared (CDT 2026)</span><br>
+          <span class="tag tag-pain">🔴 Breakout rooms set up manually every time</span>
+        </td>
+        <td class="cell-s2">
+          <span class="tag tag-pain">🔴 Zero auto-attendance tracking (Zoom gap table)</span><br>
+          <span class="tag tag-pain">🔴 44% students face tech barriers (Common Sense 2022)</span><br>
+          <span class="tag tag-pain">🔴 First 10 min wasted on admin</span><br>
+          <span class="tag tag-pain">🔴 Only 19% satisfied with LMS–video integration (Campus Tech 2023)</span>
+        </td>
+        <td class="cell-s3">
+          <span class="tag tag-pain">🔴 No per-student engagement view (Zoom gap)</span><br>
+          <span class="tag tag-pain">🔴 Only 32% say tools measure participation (EDUCAUSE 2023)</span><br>
+          <span class="tag tag-pain">🔴 Average 16+ tools managed by IT (Gartner 2023)</span><br>
+          <span class="tag tag-pain">🔴 Tab-switching breaks lesson flow</span>
+        </td>
+        <td class="cell-s4">
+          <span class="tag tag-pain">🔴 No AI academic integrity tools (88% students use GenAI)</span><br>
+          <span class="tag tag-pain">🔴 Blind to passive students in real time</span><br>
+          <span class="tag tag-pain">🔴 No adaptive nudges or at-risk flags</span><br>
+          <span class="tag tag-pain">🔴 Passive learning = lower engagement (EDUCAUSE 2022–24)</span>
+        </td>
+        <td class="cell-s5">
+          <span class="tag tag-pain">🔴 No auto-sync to LMS gradebook / Canvas</span><br>
+          <span class="tag tag-pain">🔴 No parent communication feature (Zoom gap)</span><br>
+          <span class="tag tag-pain">🔴 Recording re-upload is manual</span><br>
+          <span class="tag tag-pain">🔴 AI summaries not delivered into LMS (partial LTI only)</span>
+        </td>
+      </tr>
+      <tr>
+        <td class="row-label">Opportunity</td>
+        <td class="cell-s1">
+          <span class="tag tag-opp">✅ Lesson plan view inside Zoom Classroom Mode (Opp. 1)</span><br>
+          <span class="tag tag-opp">✅ AI-guided setup: auto-configure breakout rooms from roster</span><br>
+          <span class="tag tag-opp">✅ AI Companion onboarding — make it feel safe &amp; guided</span><br>
+          <span class="tag tag-opp">✅ LTI 1.3 deep Canvas sync at session creation</span>
+        </td>
+        <td class="cell-s2">
+          <span class="tag tag-opp">✅ Auto-attendance on join with LMS export (Opp. 1)</span><br>
+          <span class="tag tag-opp">✅ Student tech triage assistant — AI diagnoses audio/video issues</span><br>
+          <span class="tag tag-opp">✅ Pre-session checklist: AI confirms materials are visible in LMS</span>
+        </td>
+        <td class="cell-s3">
+          <span class="tag tag-opp">✅ Per-student engagement indicator (participation, chat activity)</span><br>
+          <span class="tag tag-opp">✅ Unified teacher view: whiteboard + LMS + class timer in one pane</span><br>
+          <span class="tag tag-opp">✅ AI Companion 3.0 live notes — eliminate tab switching</span><br>
+          <span class="tag tag-opp">✅ AI lesson recap auto-delivered to Canvas (Opp. 3)</span>
+        </td>
+        <td class="cell-s4">
+          <span class="tag tag-opp">✅ Real-time at-risk student flag (low participation signal)</span><br>
+          <span class="tag tag-opp">✅ AI academic integrity dashboard — detect GenAI use (Opp. 2)</span><br>
+          <span class="tag tag-opp">✅ AI tutoring bot trained on session content for in-class Q&amp;A (Opp. 4)</span><br>
+          <span class="tag tag-opp">✅ Adaptive engagement nudge: suggest breakout if class goes silent</span>
+        </td>
+        <td class="cell-s5">
+          <span class="tag tag-opp">✅ Auto-sync attendance + recording to Canvas gradebook (Opp. 3)</span><br>
+          <span class="tag tag-opp">✅ AI-generated parent summary pushed via Zoom (Opp. 5)</span><br>
+          <span class="tag tag-opp">✅ Personalised student study guide delivered post-session (Opp. 4)</span><br>
+          <span class="tag tag-opp">✅ Next-lesson AI prep brief based on today's engagement data</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="curve-wrap">
+    <div class="curve-title">Emotional curve</div>
+    <svg width="100%" viewBox="0 0 660 120" role="img"><title>Emotional curve showing teacher sentiment across five journey stages</title><desc>Starts at Resigned in Pre-class, drops sharply to Stressed at Joining, reaches lowest point Overwhelmed during class, recovers slightly to Uncertain at Interaction, then dips again to Exhausted post-class.</desc>
+      <defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+      <line x1="30" y1="10" x2="30" y2="95" stroke="var(--color-border-secondary)" stroke-width="0.5"/>
+      <text class="ts" x="26" y="18" text-anchor="end" style="font-size:10px;fill:var(--color-text-secondary)">😊</text>
+      <text class="ts" x="26" y="96" text-anchor="end" style="font-size:10px;fill:var(--color-text-secondary)">😩</text>
+      <line x1="30" y1="95" x2="650" y2="95" stroke="var(--color-border-secondary)" stroke-width="0.5"/>
+      <path d="M78 42 C110 42, 130 72, 162 72 C194 72, 220 88, 280 90 C310 91, 330 78, 400 78 C440 78, 470 86, 530 86" fill="none" stroke="#E24B4A" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="78"  cy="42" r="5" fill="#185FA5"/>
+      <circle cx="162" cy="72" r="5" fill="#E24B4A"/>
+      <circle cx="280" cy="90" r="5" fill="#BA7517"/>
+      <circle cx="400" cy="78" r="5" fill="#D4537E"/>
+      <circle cx="530" cy="86" r="5" fill="#533AB7"/>
+      <text style="font-size:10px;fill:var(--color-text-secondary)" text-anchor="middle" x="78"  y="108">Pre-class</text>
+      <text style="font-size:10px;fill:var(--color-text-secondary)" text-anchor="middle" x="162" y="108">Joining</text>
+      <text style="font-size:10px;fill:var(--color-text-secondary)" text-anchor="middle" x="280" y="108">During class</text>
+      <text style="font-size:10px;fill:var(--color-text-secondary)" text-anchor="middle" x="400" y="108">Interaction</text>
+      <text style="font-size:10px;fill:var(--color-text-secondary)" text-anchor="middle" x="530" y="108">Post-class</text>
+      <text style="font-size:10px;fill:#042C53;font-weight:500" text-anchor="middle" x="78"  y="34">Resigned</text>
+      <text style="font-size:10px;fill:#A32D2D;font-weight:500" text-anchor="middle" x="162" y="64">Stressed</text>
+      <text style="font-size:10px;fill:#854F0B;font-weight:500" text-anchor="middle" x="280" y="82">Overwhelmed</text>
+      <text style="font-size:10px;fill:#993556;font-weight:500" text-anchor="middle" x="400" y="70">Helpless</text>
+      <text style="font-size:10px;fill:#3C3489;font-weight:500" text-anchor="middle" x="530" y="78">Exhausted</text>
+      <line x1="162" y1="62" x2="162" y2="68" stroke="#E24B4A" stroke-width="1.5" stroke-dasharray="3 2"/>
+      <text style="font-size:9px;fill:#A32D2D" x="170" y="56">⚡ Breakdown 1</text>
+      <line x1="280" y1="78" x2="280" y2="84" stroke="#BA7517" stroke-width="1.5" stroke-dasharray="3 2"/>
+      <text style="font-size:9px;fill:#854F0B" x="286" y="72">⚡ Breakdown 2</text>
+    </svg>
+  </div>
+
+  <div class="breakdown">
+    <div class="breakdown-title">Key breakdown moments</div>
+    <div class="breakdown-list">
+      <span class="tag tag-break">⚡ Joining — First 10 min lost to tech issues + manual attendance. No auto-tracking exists in Zoom (research gap: "High").</span>
+      <span class="tag tag-break">⚡ During class — Peak cognitive overload: teaching + tab-switching + engagement blind spot. Only 32% of teachers say tools measure participation (EDUCAUSE 2023).</span>
+      <span class="tag tag-break">⚡ Post-class — Manual re-upload of recordings, manual parent comms, no LMS sync. 30–45 min of avoidable admin per session.</span>
+    </div>
+  </div>
+</div>
